@@ -1,6 +1,6 @@
 <?php
 interface Checkable
 {
-abstract function checkRightAnswer();
+public function checkRightAnswer();
 }
 ?>

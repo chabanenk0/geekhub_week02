@@ -2,6 +2,6 @@
 
 interface Askable
 {
- abstract function askQuestion();
+ public function askQuestion();
 }
 ?>

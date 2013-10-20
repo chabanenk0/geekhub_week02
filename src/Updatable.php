@@ -1,6 +1,6 @@
 <?php
 interface Updatable
 {
-abstract function addToDatabase();
+public function addToDatabase();
 }
 ?>
