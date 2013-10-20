@@ -1,21 +1,24 @@
 <?php
 
-require_once("TestQuestion.php");
+//require_once("TestQuestion.php");
 
-class OneCaseTestQuestion extends TestQuestion {
+namespace Test;
 
- public function askQuestion()
- {
-   echo "<p class=question>Question: ",$this->question."</p>";
-   $qnum=$this->number;
-   $num=0;
-   foreach ($this->answers as $i)
-    {$num=$num+1; // !!! Bad idea! It needs to add id to the Answer's class!!! The same for question number (fixed)
-     echo "<p><label><input type=radio id=$num name=ans$>";
-     $i->ask();
-     echo '</label></p>';
+use Test\TestQuestion;
+
+class OneCaseTestQuestion extends TestQuestion implements Askable
+{
+
+    public function askQuestion()
+    {
+        $resulttext= "<p class=question>Question: ".$this->question."</p>";
+        $qnum=$this->number;
+        $num=0;
+        foreach ($this->answers as $i) {
+            $num=$num+1; // !!! Bad idea! It needs to add id to the Answer's class!!! The same for question number (fixed)
+            $resulttext=$resulttext."<p><label><input type=radio id=$num name=ans>";
+            $resulttext=$resulttext.$i->ask();
+            $resulttext=$resulttext.'</label></p>';
+        }
     }
- }
-
 }
-?>

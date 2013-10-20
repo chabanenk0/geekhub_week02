@@ -1,6 +1,9 @@
 <?php
+
+namespace Test;
+
 interface Checkable
 {
-public function checkRightAnswer();
+    public function checkRightAnswer();
 }
 ?>

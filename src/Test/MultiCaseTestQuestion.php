@@ -1,21 +1,24 @@
 <?php
 
-require_once("TestQuestion.php");
+namespace Test;
 
-class MultiCaseTestQuestion extends TestQuestion {
+//require_once("TestQuestion.php");
 
- public function askQuestion()
- {
-   echo "<p class=question>Question: ",$this->question."</p>";
-   $qnum=$this->number;
-   $num=0;
-   foreach ($this->answers as $i)
-    {$num=$num+1; // !!! Bad idea! It needs to add id to the Answer's class!!! The same for question number (fixed)
-     echo "<p><label><input type=checkbox id=$num name=ans$>";
-     $i->ask();
-     echo '</label></p>';
+use Test\TestQuestion;
+
+class MultiCaseTestQuestion extends TestQuestion 
+{
+    public function askQuestion()
+    {
+        $resulttext="<p class=question>Question: ".$this->question."</p>";
+        $qnum=$this->number;
+        $num=0;
+        foreach ($this->answers as $i) {
+            $num=$num+1; // !!! Bad idea! It needs to add id to the Answer's class!!! The same for question number (fixed)
+            $resulttext=$resulttext."<p><label><input type=checkbox id=$num name=ans$>";
+            $resulttext=$resulttext.$i->ask();
+            $resulttext=$resulttext.'</label></p>';
+        }
+    return $resulttext;
     }
- }
-
 }
-?>

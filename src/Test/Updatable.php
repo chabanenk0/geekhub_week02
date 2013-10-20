@@ -1,6 +1,8 @@
 <?php
+
+namespace Test;
+
 interface Updatable
 {
-public function addToDatabase();
+    public function addToDatabase();
 }
-?>

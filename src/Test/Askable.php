@@ -1,7 +1,8 @@
 <?php
 
+namespace Test;
+
 interface Askable
 {
- public function askQuestion();
+    public function askQuestion();
 }
-?>

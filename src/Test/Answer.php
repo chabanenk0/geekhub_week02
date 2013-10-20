@@ -1,27 +1,28 @@
 <?php
 
+namespace Test;
+
 class Answer
 {
-protected $answerText;
+    protected $answerText;
 
-public function _construct ($answt)
- {$answerText=$answt;
- }
+    public function __construct ($answt)
+    {
+        $answerText=$answt;
+    }
 
-public function getAnswer ()
- {
-   return $answerText;
- }
+    public function getAnswer ()
+    {
+        return $answerText;
+    }
 
-public function setAnswer ($answt)
- {$this->answerText=$answt;
- }
+    public function setAnswer ($answt)
+    {
+        $this->answerText=$answt;
+    }
 
-public function ask()
- {
-   echo $this->answerText;
- }
-
-
+    public function ask()
+    {
+        return  $this->answerText;
+    }
 }
-?>
