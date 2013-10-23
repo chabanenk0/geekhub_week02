@@ -36,10 +36,15 @@ abstract class AbstractTestQuestion implements AskableInterface
         $this->answers=array();
     }
 
-    public function addAnswer($answer) // input argument should be text answer
+    public function addAnswer(Answer $answer) // for input as Answer class
+    {
+        array_push($this->answers, $answer);
+    }
+    public function addAnswer(string $answer) // for input as string
     {
         $ans=new Answer("");
         $ans->setAnswer($answer);
         array_push($this->answers, $ans);
     }
+
 }
