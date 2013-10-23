@@ -2,7 +2,7 @@
 
 namespace Test;
 
-interface Checkable
+interface CheckableInterface
 {
     public function checkRightAnswer();
 }

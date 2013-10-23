@@ -2,11 +2,11 @@
 
 namespace Test;
 
-//require_once("TestQuestion.php");
+//require_once("AbstractTestQuestion.php");
 
 use Test\TestQuestion;
 
-class MultiCaseTestQuestion extends TestQuestion 
+class MultiCaseTestQuestion extends AbstractTestQuestion
 {
     public function askQuestion()
     {

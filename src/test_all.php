@@ -1,6 +1,6 @@
 <?php
 /*
-require("TestQuestion.php");
+require("AbstractTestQuestion.php");
 require("OneCaseTestQuestion.php");
 require("MultiCaseTestQuestion.php");
 */

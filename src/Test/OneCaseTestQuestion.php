@@ -1,12 +1,12 @@
 <?php
 
-//require_once("TestQuestion.php");
+//require_once("AbstractTestQuestion.php");
 
 namespace Test;
 
 use Test\TestQuestion;
 
-class OneCaseTestQuestion extends TestQuestion implements Askable
+class OneCaseTestQuestion extends AbstractTestQuestion implements AskableInterface
 {
 
     public function askQuestion()

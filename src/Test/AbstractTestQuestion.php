@@ -1,13 +1,13 @@
 <?php
-//require_once("Askable.php");
-//require_once("Checkable.php");
+//require_once("AskableInterface.php");
+//require_once("CheckableInterface.php");
 //require_once("Answer.php");
 
 namespace Test;
 
 use Test\Answer;
 
-abstract class TestQuestion implements Askable
+abstract class AbstractTestQuestion implements AskableInterface
 {
     protected $number;
     protected $question;
@@ -38,7 +38,7 @@ abstract class TestQuestion implements Askable
 
     public function addAnswer($answer) // input argument should be text answer
     {
-        $ans=new Answer();
+        $ans=new Answer("");
         $ans->setAnswer($answer);
         array_push($this->answers, $ans);
     }

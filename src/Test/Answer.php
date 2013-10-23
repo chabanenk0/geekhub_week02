@@ -6,19 +6,19 @@ class Answer
 {
     protected $answerText;
 
-    public function __construct ($answt)
+    public function __construct ($newAnswerText)
     {
-        $answerText=$answt;
+        $answerText=$newAnswerText;
     }
 
     public function getAnswer ()
     {
-        return $answerText;
+        return $this->answerText;
     }
 
-    public function setAnswer ($answt)
+    public function setAnswer ($answerText)
     {
-        $this->answerText=$answt;
+        $this->answerText=$answerText;
     }
 
     public function ask()

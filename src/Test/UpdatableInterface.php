@@ -2,7 +2,7 @@
 
 namespace Test;
 
-interface Updatable
+interface UpdatableInterface
 {
     public function addToDatabase();
 }
