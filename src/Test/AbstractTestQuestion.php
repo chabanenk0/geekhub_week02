@@ -40,7 +40,7 @@ abstract class AbstractTestQuestion implements AskableInterface
     {
         array_push($this->answers, $answer);
     }
-    public function addAnswer(string $answer) // for input as string
+    public function addAnswerString(string $answer) // for input as string
     {
         $ans=new Answer("");
         $ans->setAnswer($answer);
