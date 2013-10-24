@@ -36,9 +36,19 @@ abstract class AbstractTestQuestion implements AskableInterface
         $this->answers=array();
     }
 
-    public function addAnswer(Answer $answer) // for input as Answer class
+    public function addAnswer($answer) // for input as Answer class
     {
-        array_push($this->answers, $answer);
+        if ($answer instanceof Answer) {
+            array_push($this->answers, $answer);
+        }
+        elseif (is_string($answer)) {
+            $ans=new Answer($answer);
+            array_push($this->answers, $ans);
+        }
+        else {
+            die ("Wrong type for method addAnswer");// it needs to add exceptions...
+        }
+
     }
     public function addAnswerString(string $answer) // for input as string
     {

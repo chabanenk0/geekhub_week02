@@ -22,7 +22,7 @@ echo $a->askQuestion();
 
 $b=new MultiCaseTestQuestion();
 $b->setQuestion("5*5=?");
-$b->addAnswer(new Answer("25"));
+$b->addAnswer("25");
 $b->addAnswer(new Answer("10"));
 $b->addAnswer(new Answer("5"));
 $b->addAnswer(new Answer("1"));

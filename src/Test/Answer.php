@@ -8,7 +8,7 @@ class Answer
 
     public function __construct ($newAnswerText)
     {
-        $answerText=$newAnswerText;
+        $this->answerText=$newAnswerText;
     }
 
     public function getAnswer ()
