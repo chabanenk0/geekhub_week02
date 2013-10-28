@@ -7,11 +7,10 @@ require("MultiCaseTestQuestion.php");
 include("autoload.php");
 
 use Test\Answer;
-use Test\TestQuestion;
+use Test\AbstractTestQuestion;
 use Test\OneCaseTestQuestion;
 use Test\MultiCaseTestQuestion;
 
-//$a=new TestQuestion();
 $a=new OneCaseTestQuestion();
 $a->setQuestion("2*2=?");
 $a->addAnswer(new Answer("1"));
@@ -27,3 +26,6 @@ $b->addAnswer(new Answer("10"));
 $b->addAnswer(new Answer("5"));
 $b->addAnswer(new Answer("1"));
 echo $b->askQuestion();
+
+
+//$c=new AbstractTestQuestion();
