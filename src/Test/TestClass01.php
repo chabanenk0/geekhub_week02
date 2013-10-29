@@ -27,19 +27,19 @@ class TestClass01 {
         $this->test->addScale($mainScale);
         $a=new OneCaseTestQuestion();
         $a->setQuestion("2*2=?");
-        $a->addAnswer(new Answer("1", new ScaleScore($mainScale, 0)));
-        $a->addAnswer(new Answer("2", new ScaleScore($mainScale, 0)));
-        $a->addAnswer(new Answer("3", new ScaleScore($mainScale, 0)));
-        $a->addAnswer(new Answer("4", new ScaleScore($mainScale, 1)));
+        $a->addAnswer(new Answer("1", array(new ScaleScore($mainScale, 0))));
+        $a->addAnswer(new Answer("2", array(new ScaleScore($mainScale, 0))));
+        $a->addAnswer(new Answer("3", array(new ScaleScore($mainScale, 0))));
+        $a->addAnswer(new Answer("4", array(new ScaleScore($mainScale, 1))));
         $this->test->addQuestion($a);
 //echo $a->askQuestion();
 
         $b=new MultiCaseTestQuestion();
         $b->setQuestion("5*5=?");
-        $b->addAnswer(new Answer("25", new ScaleScore($mainScale, 1)));
-        $b->addAnswer(new Answer("10", new ScaleScore($mainScale, 0)));
-        $b->addAnswer(new Answer("5", new ScaleScore($mainScale, 0)));
-        $b->addAnswer(new Answer("1", new ScaleScore($mainScale, 0)));
+        $b->addAnswer(new Answer("25", array(new ScaleScore($mainScale, 1))));
+        $b->addAnswer(new Answer("10", array(new ScaleScore($mainScale, 0))));
+        $b->addAnswer(new Answer("5", array(new ScaleScore($mainScale, 0))));
+        $b->addAnswer(new Answer("1", array(new ScaleScore($mainScale, 0))));
         $this->test->addQuestion($b);
 //echo $b->askQuestion();
         //echo $quiz->askQuestions();

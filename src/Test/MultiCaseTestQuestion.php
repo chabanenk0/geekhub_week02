@@ -33,7 +33,7 @@ class MultiCaseTestQuestion extends AbstractTestQuestion
 
         foreach ($this->answers as $currentAnswer) {
             $answer=$request->get("ans".$currentAnswer->getNumber());
-            if ($answer == 1) {
+            if ($answer == 'on') {
                 $currentAnswer->calcScores();
             }
         }

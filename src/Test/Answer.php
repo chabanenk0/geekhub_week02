@@ -70,9 +70,8 @@ class Answer
 
     public function calcScores()
     {
-        foreach ($this->scores as $currentScore) {
-            $currentScore->calculateScore();
-
+        foreach ($this->scores as $currentScaleScore) {
+            $currentScaleScore->calculateScore();
         }
 
     }

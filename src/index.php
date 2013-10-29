@@ -7,13 +7,15 @@ include("../vendor/autoload.php");
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-$testClassExample=new TestClass01(); // create quiz example
+$testClassExample = new TestClass01(); // create quiz example
 
 $testExample=$testClassExample->getTest(); // get an instance of Test class
 
 $request=Request::CreateFromGlobals();
+//$request=Request::Create("?ans1=5&ans6=on&mytest=mytest");
+
 echo $request->get("mytest");
-if (count($request->get("mytest"))>0) {
+if (count($request->get("mytest"))==0) {
     $responseText = $testExample->askQuestions();
 }
 else {
