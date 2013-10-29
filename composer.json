@@ -1,4 +1,7 @@
 {
+    "autoload": {
+    "psr-0":{"Test\\":"src/"}
+    },
     "require": {
         "symfony/http-foundation": "2.2.*@dev",
         "twig/twig": "v1.14.1"
