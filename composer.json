@@ -4,6 +4,8 @@
     },
     "require": {
         "symfony/http-foundation": "2.2.*@dev",
-        "twig/twig": "v1.14.1"
+        "twig/twig": "v1.14.1",
+        "phpunit/phpunit": "3.7.*@dev",
+        "symfony/form": "2.4.*@dev"
     }
 }
