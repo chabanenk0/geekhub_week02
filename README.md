@@ -17,4 +17,8 @@ It has interfaces Askable (method askQuestion()), Checkable (methods checkRightA
 
 To be continued...
 
+20131105
+For running tests type a command:
+vendor/bin/phpunit
+
 Authors: 1) Dmitry Chabanenko 2)....
