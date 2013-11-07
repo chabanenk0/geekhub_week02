@@ -96,13 +96,14 @@ class Test
         ));
         //$formBuilder->add("q1","text", array("value"=>"mytext1"));
         //$formBuilder->add("q2","text", array("value"=>"mytext2"));
-        $form=$formBuilder->getForm();
         $questionsText = "<form method=POST action='index.php'>\n<input type=hidden name=mytest value=mytest>\n";
 
         foreach ($this->questions as $question) {
-            $questionsText=$questionsText.$question->askQuestion();
+            //$questionsText=$questionsText.$question->askQuestion();
+            $formBuilder=$question->addQuestionToForm($formBuilder);
         }
         //$questionsText = $questionsText."<input type=submit value='ok'></form>";
+        $form=$formBuilder->getForm();
         $questionsText=$this->twig->render("new.html.twig",array('form'=>$form->createView()));
 
         return $questionsText;
