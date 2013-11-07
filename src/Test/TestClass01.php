@@ -42,7 +42,7 @@ class TestClass01 {
         $b->addAnswer(new Answer("1", array(new ScaleScore($mainScale, 0))));
         $this->test->addQuestion($b);
 //echo $b->askQuestion();
-        //echo $quiz->askQuestions();
+        echo $this->test->askQuestions();
     }
 
     /**

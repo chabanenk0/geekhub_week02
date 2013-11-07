@@ -3,6 +3,7 @@
 namespace Test;
 
 include("../vendor/autoload.php");
+//include "Test/setup.php";
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
